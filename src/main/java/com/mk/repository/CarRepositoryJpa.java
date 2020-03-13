@@ -6,7 +6,7 @@ import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class CarRepository {
+public class CarRepositoryJpa {
     public void saveCar(Car car) {
         Transaction tx = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()){

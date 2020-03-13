@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Entity
+@Entity(name = "CAR_JPA")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
