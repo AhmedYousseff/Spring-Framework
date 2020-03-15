@@ -1,13 +1,14 @@
 package main.java.com.mk.repository;
 
 import main.java.com.mk.domain.Car;
+import main.java.com.mk.repository.impl.CarRepository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class CarRepositoryJdbc {
+public class CarRepositoryJdbc implements CarRepository {
     private static final String INSERT_CAR_SQL = "INSERT INTO  CAR_JDBC(ID, MODEL, PRICE) values (?, ?, ?)";
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/medium";
     private static final String CREATE_TABLES_SQL = "create table CAR_JDBC(ID VARCHAR(255), MODEL VARCHAR(255), PRICE VARCHAR(255))";
