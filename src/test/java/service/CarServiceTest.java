@@ -14,13 +14,5 @@ class CarServiceTest {
     @Test
     void saveCarTest() {
         Car car = new Car(1001L, "BMW", new BigDecimal(5651));
-        boolean res = Arrays.asList("Ferrari", "aston martin", "lampo").stream()
-                        .anyMatch(e -> e.equalsIgnoreCase(car.getModel()));
-        try {
-            if (res == true) {
-                CarService carService = new CarService();
-                carService.save(car);
-            }
-        }catch (Exception e) {}
     }
 }

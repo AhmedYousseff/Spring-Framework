@@ -9,11 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CarRepositoryJdbc implements CarRepository {
-    private static final String INSERT_CAR_SQL = "INSERT INTO  CAR_JDBC(ID, MODEL, PRICE) values (?, ?, ?)";
+    private static final String INSERT_CAR_SQL = "INSERT INTO  CAR(ID, MODEL, PRICE) values (?, ?, ?)";
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/medium";
-    private static final String CREATE_TABLES_SQL = "create table CAR_JDBC(ID VARCHAR(255), MODEL VARCHAR(255), PRICE VARCHAR(255))";
+    private static final String CREATE_TABLES_SQL = "create table CAR(ID VARCHAR(255), MODEL VARCHAR(255), PRICE VARCHAR(255))";
     private static final String DRIVER_URL = "com.mysql.cj.jdbc.Driver";
-    private static final String DROP_TABLE = "DROP TABEL if exists CAR_JDPC";
 
     public CarRepositoryJdbc() {
         try {
