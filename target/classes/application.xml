@@ -7,9 +7,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="carService" class="main.java.com.mk.service.impl.CarServiceImpl">
-
-        <property name="carRepository" ref="carRepository"/>
-
+        <property   name="carRepository" ref="carRepository"/>
     </bean>
     <bean id="carRepository" class="main.java.com.mk.repository.CarRepositoryJdbc"></bean>
 

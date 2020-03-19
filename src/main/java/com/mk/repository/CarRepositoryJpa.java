@@ -3,9 +3,10 @@ package main.java.com.mk.repository;
         import main.java.com.mk.config.HibernateUtil;
         import main.java.com.mk.domain.Car;
         import main.java.com.mk.repository.impl.CarRepository;
-        import org.hibernate.Hibernate;
         import org.hibernate.Session;
         import org.hibernate.Transaction;
+
+        import java.util.List;
 
 public class CarRepositoryJpa implements CarRepository {
     public void save(Car car) {
@@ -20,5 +21,10 @@ public class CarRepositoryJpa implements CarRepository {
             }
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public List<Car> findAllCars() {
+        return null;
     }
 }

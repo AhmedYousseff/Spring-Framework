@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="986a5641-265d-40f9-b839-9f8b12a8d70e" name="Default Changelist" comment="">
+    <list default="true" id="986a5641-265d-40f9-b839-9f8b12a8d70e" name="Default Changelist" comment="use programming to interface concept and add SimpleContainer class and use it in the Client-2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/config/SimpleContainer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/config/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/config/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/domain/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/repository/CarRepositoryJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/repository/CarRepositoryJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/repository/CarRepositoryJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/repository/CarRepositoryJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/repository/impl/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/repository/impl/CarRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/service/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mk/service/impl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mk/service/impl/CarServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/service/CarServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/CarServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/config/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/config/HibernateUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/domain/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/domain/Car.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/repository/CarRepositoryJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/repository/CarRepositoryJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/repository/CarRepositoryJpa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/repository/CarRepositoryJpa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/repository/impl/CarRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/repository/impl/CarRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/service/CarService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/service/CarService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/mk/service/impl/CarServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/java/com/mk/service/impl/CarServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/test/java/service/CarServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/java/service/CarServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +50,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="xml-container" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -79,7 +94,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/docker" />
+    <property name="last_opened_file_path" value="$USER_HOME$/properties" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
@@ -171,6 +186,11 @@
       <option name="presentableId" value="Default" />
       <updated>1584122890160</updated>
       <workItem from="1584122893729" duration="2470000" />
+      <workItem from="1584366199110" duration="17532000" />
+      <workItem from="1584545049100" duration="5227000" />
+      <workItem from="1584562704996" duration="4568000" />
+      <workItem from="1584570557271" duration="3225000" />
+      <workItem from="1584627403938" duration="10392000" />
     </task>
     <servers />
   </component>
@@ -182,7 +202,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -202,10 +224,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584126992926" />
-    <state x="2685" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1584311978450">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1584646291607">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584218467671" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584646291607" />
     <state x="2685" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584311978450" />
     <state x="2610" y="302" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1584193546222">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -215,30 +237,54 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2634" y="108" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584125634647" />
-    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1584286256223">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584644578245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584286256223" />
-    <state width="1860" height="271" key="GridCell.Tab.0.bottom" timestamp="1584319591268">
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584644578245" />
+    <state x="558" y="119" key="CommitChangelistDialog2" timestamp="1584439079130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584319591268" />
+    <state x="558" y="119" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584439079130" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1584451686029">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584451686029" />
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom" timestamp="1584646434287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584646434287" />
     <state width="1877" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584313965381" />
-    <state width="1860" height="271" key="GridCell.Tab.0.center" timestamp="1584319591267">
+    <state width="1877" height="274" key="GridCell.Tab.0.center" timestamp="1584646434287">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="271" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584319591267" />
+    <state width="1877" height="274" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584646434287" />
     <state width="1877" height="271" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584313965381" />
-    <state width="1860" height="271" key="GridCell.Tab.0.left" timestamp="1584319591266">
+    <state width="1877" height="274" key="GridCell.Tab.0.left" timestamp="1584646434286">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="271" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584319591266" />
+    <state width="1877" height="274" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584646434286" />
     <state width="1877" height="271" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584313965381" />
-    <state width="1860" height="271" key="GridCell.Tab.0.right" timestamp="1584319591267">
+    <state width="1877" height="274" key="GridCell.Tab.0.right" timestamp="1584646434287">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="271" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584319591267" />
+    <state width="1877" height="274" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584646434287" />
     <state width="1877" height="271" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584313965381" />
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom" timestamp="1584555917049">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584555917049" />
+    <state width="1877" height="338" key="GridCell.Tab.1.center" timestamp="1584555917048">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584555917048" />
+    <state width="1877" height="338" key="GridCell.Tab.1.left" timestamp="1584555917048">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584555917048" />
+    <state width="1877" height="338" key="GridCell.Tab.1.right" timestamp="1584555917048">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="338" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584555917048" />
     <state x="2417" y="268" key="Maven.ArtifactSearchDialog" timestamp="1584193813746">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -247,10 +293,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2383" y="166" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1584123841108" />
-    <state x="668" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1584286121729">
+    <state x="668" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1584627478814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584286121729" />
+    <state x="668" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584627478814" />
     <state x="2651" y="241" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1584193554061">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
