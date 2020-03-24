@@ -10,11 +10,12 @@ import java.util.List;
 
 
 public class CarRepositoryJdbc implements CarRepository {
-    private static final String INSERT_CAR_SQL = "INSERT INTO  CAR(ID, MODEL, PRICE) values (?, ?, ?)";
+    private static final String INSERT_CAR_SQL = "INSERT INTO  CAR( MODEL, PRICE) values (?, ?)";
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/medium";
-    private static final String CREATE_TABLES_SQL = "create table CAR(ID VARCHAR(255), MODEL VARCHAR(255), PRICE VARCHAR(255))";
+    private static final String CREATE_TABLES_SQL = "create table CAR(ID MEDIUMINT NOT NULL AUTO_INCREMENT,, MODEL VARCHAR(255), PRICE VARCHAR(255))";
     private static final String FIND_ALL_CARS = "SELECT * FROM CAR";
     private static final String DRIVER_URL = "com.mysql.cj.jdbc.Driver";
+    
 
     public CarRepositoryJdbc() {
         try {
@@ -32,16 +33,19 @@ public class CarRepositoryJdbc implements CarRepository {
                 createTable.executeUpdate();
             }
         }
-        catch (SQLException e) { }
+        catch (SQLException e) {
+            e.getErrorCode();
+            // if an error we assume that is because Table Car is already been created
+        }
     }
 
+    @Override
     public void save(Car newCar) {
         try {
             try (Connection con = DriverManager.getConnection(DATABASE_URL, "root", "");
                  PreparedStatement insertCar = con.prepareStatement(INSERT_CAR_SQL)) {
-                insertCar.setLong(1, newCar.getId());
-                insertCar.setString(2, newCar.getModel());
-                insertCar.setBigDecimal(3, newCar.getPrice());
+                insertCar.setString(1, newCar.getModel());
+                insertCar.setBigDecimal(2, newCar.getPrice());
                 insertCar.executeUpdate();
             }
         } catch (SQLException e) {
@@ -64,9 +68,30 @@ public class CarRepositoryJdbc implements CarRepository {
                     cars.add(car);
                 }
 
-        } catch (SQLException sql){}
+        } catch (SQLException sql){
+            sql.getErrorCode();
+        }
             return cars;
     }
 
+    @Override
+    public void delete(Car car) {
+
+    }
+
+    @Override
+    public List<Car> findCarByModel(String model) {
+        return null;
+    }
+
+    @Override
+    public Car findCarById(Long id) {
+        return null;
+    }
+
+    @Override
+    public List<Car> priceBetween(BigDecimal min, BigDecimal max) {
+        return null;
+    }
 }
 

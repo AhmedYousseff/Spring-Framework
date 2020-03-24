@@ -6,6 +6,7 @@ package main.java.com.mk.repository;
         import org.hibernate.Session;
         import org.hibernate.Transaction;
 
+        import java.math.BigDecimal;
         import java.util.List;
 
 public class CarRepositoryJpa implements CarRepository {
@@ -25,6 +26,26 @@ public class CarRepositoryJpa implements CarRepository {
 
     @Override
     public List<Car> findAllCars() {
+        return null;
+    }
+
+    @Override
+    public void delete(Car car) {
+
+    }
+
+    @Override
+    public List<Car> findCarByModel(String model) {
+        return null;
+    }
+
+    @Override
+    public Car findCarById(Long id) {
+        return null;
+    }
+
+    @Override
+    public List<Car> priceBetween(BigDecimal min, BigDecimal max) {
         return null;
     }
 }

@@ -6,9 +6,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="carService" class="main.java.com.mk.service.impl.CarServiceImpl">
-        <property   name="carRepository" ref="carRepository"/>
+    <bean id="carService" class="main.java.com.mk.service.impl.CarServiceImpl"/>
+
+    <bean id="carRepository" class="main.java.com.mk.repository.impl.CarRepositorySpringJdbcTemplateImpl">
+        <constructor-arg ref="JdbcTemplate"/>
     </bean>
-    <bean id="carRepository" class="main.java.com.mk.repository.CarRepositoryJdbc"></bean>
+
+   <bean id="JdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"/>
 
 </beans>

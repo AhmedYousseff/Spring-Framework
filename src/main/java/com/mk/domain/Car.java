@@ -1,24 +1,25 @@
 package main.java.com.mk.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Cascade;
+import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Entity
+@RequiredArgsConstructor
+@Getter @Setter @ToString @EqualsAndHashCode
 
+@Entity
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NonNull
     private String model;
+    @NonNull
     private BigDecimal price;
 }
